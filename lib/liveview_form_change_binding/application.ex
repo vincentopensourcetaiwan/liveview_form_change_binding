@@ -10,7 +10,8 @@ defmodule LiveviewFormChangeBinding.Application do
     children = [
       LiveviewFormChangeBindingWeb.Telemetry,
       LiveviewFormChangeBinding.Repo,
-      {DNSCluster, query: Application.get_env(:liveview_form_change_binding, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:liveview_form_change_binding, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: LiveviewFormChangeBinding.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: LiveviewFormChangeBinding.Finch},
