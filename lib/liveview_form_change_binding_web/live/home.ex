@@ -4,6 +4,9 @@ defmodule LiveviewFormChangeBindingWeb.Home do
   def render(assigns) do
     ~H"""
     <h1>Welcome to Phoenix!</h1>
+    <form>
+      <input type="number" name="length" value={@length} />
+    </form>
     """
   end
 
